@@ -1,0 +1,139 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_firstForDenmarkFragment2"
+            app:destination="@id/firstForDenmarkFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_firstForArgentinaFragment"
+            app:destination="@id/firstForArgentinaFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_firstEcuadorFragment"
+            app:destination="@id/firstEcuadorFragment" />
+        <action
+            android:id="@+id/action_firstFragment_self"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.korea.FirstForKoreaFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_first_for_korea">
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.korea.ForKoreaFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_for_korea">
+        <action
+            android:id="@+id/action_thirdFragment_to_tableFragment"
+            app:destination="@id/tableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tableFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.korea.TableFragmentKor"
+        android:label="fragment_table"
+        tools:layout="@layout/fragment_table_korea" />
+    <fragment
+        android:id="@+id/firstForDenmarkFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.denmark.FirstForDenmarkFragment"
+        android:label="fragment_first_for_denmark"
+        tools:layout="@layout/fragment_first_for_denmark">
+        <action
+            android:id="@+id/action_firstForDenmarkFragment_to_forDenmarkFragment2"
+            app:destination="@id/forDenmarkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forDenmarkFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.denmark.ForDenmarkFragment"
+        android:label="fragment_for_denmark"
+        tools:layout="@layout/fragment_for_denmark">
+        <action
+            android:id="@+id/action_forDenmarkFragment_to_tableDenFragment"
+            app:destination="@id/tableDenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tableDenFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.denmark.TableDenFragment"
+        android:label="TableDenFragment" />
+    <fragment
+        android:id="@+id/firstForArgentinaFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.argentina.FirstForArgentinaFragment"
+        android:label="FirstForArgentinaFragment">
+        <action
+            android:id="@+id/action_firstForArgentinaFragment_to_forArgentinaFragment"
+            app:destination="@id/forArgentinaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forArgentinaFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.argentina.ForArgentinaFragment"
+        android:label="ForArgentinaFragment">
+        <action
+            android:id="@+id/action_forArgentinaFragment_to_tableArgFragment"
+            app:destination="@id/tableArgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tableArgFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.argentina.TableArgFragment"
+        android:label="TableArgFragment" />
+    <fragment
+        android:id="@+id/firstEcuadorFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.ecuador.FirstEcuadorFragment"
+        android:label="FirstEcuadorFragment">
+        <action
+            android:id="@+id/action_firstEcuadorFragment_to_forEcuadorFragment"
+            app:destination="@id/forEcuadorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forEcuadorFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.ecuador.ForEcuadorFragment"
+        android:label="ForEcuadorFragment">
+        <action
+            android:id="@+id/action_forEcuadorFragment_to_tableEcuFragment"
+            app:destination="@id/tableEcuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tableEcuFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.ecuador.TableEcuFragment"
+        android:label="TableEcuFragment" />
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="petto.para.leaguematch.presentation.fragments.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_start2Fragment"
+            app:destination="@id/start2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/start2Fragment"
+        android:name="petto.para.leaguematch.presentation.fragments.start.Start2Fragment"
+        android:label="Start2Fragment" >
+        <action
+            android:id="@+id/action_start2Fragment_to_start3Fragment"
+            app:destination="@id/start3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/start3Fragment"
+        android:name="petto.para.leaguematch.presentation.fragments.start.Start3Fragment"
+        android:label="Start3Fragment" >
+        <action
+            android:id="@+id/action_start3Fragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
